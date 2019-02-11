@@ -30,4 +30,5 @@ class Quiz:
     return correct, question_end - question_start
 
   def summary(self):
-    pass
+    print(f'You got {self.total_correct()} out of {self.questions} right.')
+    print(f'It took you {self.end_time - self.start_time} seconds total.')
