@@ -13,7 +13,10 @@ class Quiz:
     pass
     
   def take_quiz(self):
-    pass
+    self.start_time = datetime.datetime.now()
+
+    for question in self.questions:
+      self.answers.append(self.ask(question))
     
   def ask(self, question):
     correct = False
