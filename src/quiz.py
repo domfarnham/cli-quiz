@@ -25,6 +25,6 @@ class Quiz:
     
     question_ end = datetime.datetime.now()
     return correct, question_end - question_start
-    
+
   def summary(self):
     pass
