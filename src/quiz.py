@@ -16,7 +16,15 @@ class Quiz:
     pass
     
   def ask(self, question):
-    pass
-  
+    correct = False
+    question_start = datetime.datetime.now()
+    answer = input(question.text + ' = ')
+    
+    if answer == str(question.answer):
+      correct = True
+    
+    question_ end = datetime.datetime.now()
+    return correct, question_end - question_start
+    
   def summary(self):
     pass
