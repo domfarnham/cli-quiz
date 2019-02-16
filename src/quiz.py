@@ -10,7 +10,12 @@ class Quiz:
   answers = []
   
   def __init__(self):
-    pass
+    question_types = (Add, Multiply)
+    for _ in range(10):
+      num1 = random.randint(1, 10)
+      num2 = random.randint(1, 10)
+      question = random.choice(question_types)(num1, num2)
+      self.questions.append()
     
   def take_quiz(self):
     pass
@@ -18,5 +23,13 @@ class Quiz:
   def ask(self, question):
     pass
   
+  def total_correct(self):
+    total = 0
+    for answer in self.answers:
+      if answer[0]:
+        total += 1
+    return total
+
   def summary(self):
-    pass
+    print(f'You got {self.total_correct()} out of {self.questions} right')
+    print(f'It took you {(self.end_time-self.start_time).seconds} seconds total.')
